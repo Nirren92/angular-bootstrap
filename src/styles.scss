@@ -1,82 +1,31 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
+// Importera Angular Material
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
+// Inkludera kärnstilar för Angular Material
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
+// Definiera paletterna för ditt tema
 $angular-bootstrap-primary: mat.define-palette(mat.$indigo-palette);
 $angular-bootstrap-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
 $angular-bootstrap-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+// Skapa temakonfigurationen
 $angular-bootstrap-theme: mat.define-light-theme((
   color: (
     primary: $angular-bootstrap-primary,
     accent: $angular-bootstrap-accent,
-    warn: $angular-bootstrap-warn,
+    warn: $angular-bootstrap-warn
   ),
   typography: mat.define-typography-config(),
   density: 0
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+// Inkludera temastilar för varje komponent som används i din app
 @include mat.all-component-themes($angular-bootstrap-theme);
 
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$angular-bootstrap-primary: mat.define-palette(mat.$indigo-palette);
-$angular-bootstrap-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$angular-bootstrap-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$angular-bootstrap-theme: mat.define-light-theme((
-  color: (
-    primary: $angular-bootstrap-primary,
-    accent: $angular-bootstrap-accent,
-    warn: $angular-bootstrap-warn,
-  ),
-  typography: mat.define-typography-config(),
-  density: 0
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($angular-bootstrap-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
+// Globala stilar
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-main
-{
-    margin-top: 150px;
+main {
+  margin-top: 150px;
 }
