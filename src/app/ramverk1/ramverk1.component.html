@@ -1,13 +1,20 @@
 
-<div class="container mt-5">
+<div class="container">
 
     <div class="d-flex flex-column flex-md-row justify-content-between">
         <div class="rounded shadow p-0 mb-4 me-md-4 w-100">  
             <div class="bg-primary py-3 rounded-top" >
                     <h2 class="text-center text-white  " >Bootstrap</h2> 
                 </div>
-               <div>
-                <p class="text-center py-5" >Jag tycker det är väldigt bra</p>
+               <div class="p-4" >
+                <p class="text-left py-5 " >Första intrycket av bootstrap vad att det var krånglit. Men efter att ha läst dokumentation så blev de lite mer förstårligt. Tycker de färdiga klasserna 
+                    och responsiviviteten som finns är väldigt kraftfull och förstår varför tillåter för snabbare utveckling av hemsidor. Mycket av det som tagit tid går att lösa på någon sekund.
+
+                    <br>
+                    <br>
+                    Dock blir det en del mer div som som används och repeterbarheten mellan vissa delar av bootstrap är högre jämfört mot när man skapade css-klasser som gäller för tex alla h1. Nu kodar man in detta per individ i hela sidan. 
+                    Men detta kanske går att lösa på något smidigt sätt så repterbar kod inte behöver skrivas flera gånger. 
+                </p>
                </div>
             </div>
         </div> 
@@ -73,25 +80,126 @@
                     <tr>
                         <th ></th>
                         <th >Förnamn</th>
-                        <th >Efternamn</th>
-                        <th >ålder</th>
-                        <th >stad</th>
+                        <th >Roll</th>
+                        <th >Kund</th>
+                        <th >kommentar</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                    <tr class="align-items-center" >
                         <th>1</th>
                         <td>Mark</td>
-                        <td>Otto</td>
-                        <td>1992</td>
-                        <td>Ludvika</td>
+                        <td>
+                            <div class="">
+                                <select class="form-select">
+                                    <option>Ingenjör</option>
+                                    <option>Läkare</option>
+                                    <option>Programmerare</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  >
+                            <div class="">
+                                <input type="checkbox" class="form-check-input" >
+                            </div>
+                        </td>
+                        <td>
+
+                                <textarea class="form-control" id = "comment" style="height: 40px" ></textarea>
+
+                        </td>
                     </tr>
-                    <tr>
+                    <tr class="align-items-center" >
                         <th>2</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>1992</td>
-                        <td>Ludvika</td>
+                        <td>Mark2</td>
+                        <td>
+                            <div class="">
+                                <select class="form-select">
+                                    <option>Ingenjör</option>
+                                    <option>Läkare</option>
+                                    <option>Programmerare</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  >
+                            <div class="">
+                                <input type="checkbox" class="form-check-input" >
+                            </div>
+                        </td>
+                        <td>
+
+                                <textarea class="form-control" id = "comment" style="height: 40px" ></textarea>
+
+                        </td>
+                    </tr>
+                    <tr class="align-items-center" >
+                        <th>3</th>
+                        <td>Mark3</td>
+                        <td>
+                            <div class="">
+                                <select class="form-select">
+                                    <option>Ingenjör</option>
+                                    <option>Läkare</option>
+                                    <option>Programmerare</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  >
+                            <div class="">
+                                <input type="checkbox" class="form-check-input" >
+                            </div>
+                        </td>
+                        <td>
+
+                                <textarea class="form-control" id = "comment" style="height: 40px" ></textarea>
+
+                        </td>
+                    </tr>
+                    <tr class="align-items-center" >
+                        <th>4</th>
+                        <td>Mark4</td>
+                        <td>
+                            <div class="">
+                                <select class="form-select">
+                                    <option>Ingenjör</option>
+                                    <option>Läkare</option>
+                                    <option>Programmerare</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  >
+                            <div class="">
+                                <input type="checkbox" class="form-check-input" >
+                            </div>
+                        </td>
+                        <td>
+
+                                <textarea class="form-control" id = "comment" style="height: 40px" ></textarea>
+
+                        </td>
+                    </tr>
+                    <tr class="align-items-center" >
+                        <th>5</th>
+                        <td>Mark5</td>
+                        <td>
+                            <div class="">
+                                <select class="form-select">
+                                    <option>Ingenjör</option>
+                                    <option>Läkare</option>
+                                    <option>Programmerare</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td  >
+                            <div class="">
+                                <input type="checkbox" class="form-check-input" >
+                            </div>
+                        </td>
+                        <td>
+
+                                <textarea class="form-control" id = "comment" style="height: 40px" ></textarea>
+
+                        </td>
                     </tr>
                     </tbody>
                 </table>

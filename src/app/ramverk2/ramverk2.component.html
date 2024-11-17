@@ -1,4 +1,4 @@
-<div class="container mx-auto  ">
+<div class="container mx-auto  space-y-5">
 
   <div class="rounded-lg shadow-lg p-0 mb-4 md:mb-0 md:mr-4 w-full">
     <div class="bg-blue-500 py-3 rounded-t-lg">
@@ -17,7 +17,40 @@
         Formulär
       </h2>
     </div>
-      
+      <form class="space-y-3 p-3" action="">
+        
+        <div class="mb-2">
+            <label class="block text-sm font-medium">Namn</label>
+            <input type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm " >
+        </div>
+
+        <div class="mb-2">
+          <label class="block text-sm font-medium">Roll</label>
+          <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+              <option>Ingenjör</option>
+              <option>Läkare</option>
+              <option>Programmerare</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <div class="block text-sm font-medium">
+              <label class="form-check-label ">Kund?</label>
+              <input type="checkbox" class="mt-1 block " >
+          </div>
+      </div>
+
+      <div class="mb-4 py-3">
+        <div class="form-floating ">
+            <textarea class="form-control" id = "comment" style="height: 80px" ></textarea>
+            <label for="comment">Skriv kommentar</label>
+        </div>
+      </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
   
   <div class="flex flex-col md:flex-row justify-between gap-4">
