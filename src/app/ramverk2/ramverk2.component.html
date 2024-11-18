@@ -1,32 +1,37 @@
-<div class="container mx-auto  space-y-5">
+<div class="container mx-auto  space-y-5 pb-4">
 
   <div class="rounded-lg shadow-lg p-0 mb-4 md:mb-0 md:mr-4 w-full">
     <div class="bg-blue-500 py-3 rounded-t-lg">
       <h1 class="text-center text-white text-5xl font-bold">
-        hej hej
+        Tailwind
       </h1>
     </div>
-    <p class="text-center py-5" >
-      tjenaare detta är skoj :)
+    <p class="text-center p-4" >
+      Tycker bootstrap var enklare att komma igång med. detta kan ju dock ha och göra med att jag valde att börja med denna i en Angular applikation. jag tror tyvärr att det "läcker" över lite från bootstrap till Tailwind i denna sida. 
+      Detta eftersom jag märkte när jag stängde av bootstrap att det påverkade denna sida. har dock säkerställt att den fungerar utan bootstrap aktiverat. har tyvärr inte lyckats med att isolera bootstrap till endast de sidor som blir berörda. 
+      Det som har varit mitt problem är det man lägger till i angular.json filen för att kunna builda sidan. 
+
+      <br><br>
+      Annars tycker jag det verkar smidigt med tailwind och sjukt tidsbesparande. dock lite likt mina tankar med bootstrap är att det blir en hel del repeterbar kod som skrivs i html koden. tex när det kommer till att definera sådant som är för en tr i en table. 
     </p>
   </div>
 
   <div class="rounded-lg shadow-lg p-0 mb-4 md:mb-0 md:mr-4 w-full">
     <div class="bg-blue-500 py-3 rounded-t-lg">
-      <h2 class="text-center text-white text-5xl font-bold">
+      <h2 class="text-center text-white text-4xl font-bold">
         Formulär
       </h2>
     </div>
       <form class="space-y-3 p-3" action="">
         
         <div class="mb-2">
-            <label class="block text-sm font-medium">Namn</label>
-            <input type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm " >
+            <label for="namne" class="block text-sm font-medium">Namn</label>
+            <input id="namne" type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm " >
         </div>
 
         <div class="mb-2">
-          <label class="block text-sm font-medium">Roll</label>
-          <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+          <label for="roll" class="block text-sm font-medium">Roll</label>
+          <select id="roll" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
               <option>Ingenjör</option>
               <option>Läkare</option>
               <option>Programmerare</option>
@@ -34,22 +39,21 @@
         </div>
         
         <div class="mb-4">
-          <div class="block text-sm font-medium">
-              <label class="form-check-label ">Kund?</label>
-              <input type="checkbox" class="mt-1 block " >
+          <div f class="flex space-x-2">
+              <label for="kund" class="block text-sm font-medium">Kund?</label>
+              <input id="kund" type="checkbox" class="mt-1 block " >
           </div>
       </div>
 
       <div class="mb-4 py-3">
-        <div class="form-floating ">
-            <textarea class="form-control" id = "comment" style="height: 80px" ></textarea>
-            <label for="comment">Skriv kommentar</label>
-        </div>
+          <label class="block text-sm font-medium" for="kommentar">Skriv kommentar</label>
+          <textarea id="kommentar" class="block w-full px-3 py-2 border border-gray-300 rounded-md" style="height: 80px" ></textarea>
       </div>
 
 
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="flex justify-center" >
+        <button type="submit" class="px-4 py-2 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg shadow-md">Submit</button>
+      </div>
     </form>
   </div>
   
@@ -58,7 +62,7 @@
       <div class="rounded-lg shadow-lg w-full" >
         <div class="bg-blue-500 py-3 rounded-t-lg">
             <h2 class="text-3xl text-white font-bold text-center">
-              Hej Molly. du är bäst!  
+              Tabell  
             </h2>
           </div>
 
@@ -67,28 +71,144 @@
               <thead>
               <tr class="border-b border-gray-300">
                   <th ></th>
-                  <th >Förnamn</th>
-                  <th>Efternamn</th>
-                  <th >ålder</th>
-                  <th >stad</th>
+                  <th >Namn</th>
+                  <th>Roll</th>
+                  <th >Kund?</th>
+                  <th >Kommentar</th>
               </tr>
               </thead>
               <tbody>
               <tr class="hover:bg-gray-100 border-b border-gray-300">
                   <th>1</th>
                   <td>Mark</td>
-                  <td>Otto</td>
-                  <td>1992</td>
-                  <td>Ludvika</td>
+                  <td>
+                    <div class="mb-2">
+                      <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                        <option>Ingenjör</option>
+                        <option>Läkare</option>
+                        <option>Programmerare</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ml-4">
+                      <div class="">
+                          <input type="checkbox" class="mt-1 block" >
+                      </div>
+                  </div>
+                  </td>
+                  <td>
+                   
+                      <div class="">
+                        <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                      </div>
+                  </td>
               </tr>
               <tr class="hover:bg-gray-100 border-b border-gray-300">
                   <th >2</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>1992</td>
-                  <td>Ludvika</td>
+                  <td>Mark2</td>
+                  <td>
+                    <div class="mb-2">
+                      <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                        <option>Ingenjör</option>
+                        <option>Läkare</option>
+                        <option>Programmerare</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ml-4">
+                      <div class="">
+                          <input type="checkbox" class="mt-1 block" >
+                      </div>
+                  </div>
+                  </td>
+                  <td>
+                   
+                      <div class="">
+                        <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                      </div>
+                  </td>
               </tr>
-              </tbody>
+              <tr class="hover:bg-gray-100 border-b border-gray-300">
+                <th >3</th>
+                <td>Mark3</td>
+                <td>
+                  <div class="mb-2">
+                    <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                      <option>Ingenjör</option>
+                      <option>Läkare</option>
+                      <option>Programmerare</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="ml-4">
+                    <div class="">
+                        <input type="checkbox" class="mt-1 block" >
+                    </div>
+                </div>
+                </td>
+                <td>
+                 
+                    <div class="">
+                      <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr class="hover:bg-gray-100 border-b border-gray-300">
+              <th >4</th>
+              <td>Mark4</td>
+              <td>
+                <div class="mb-2">
+                  <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                    <option>Ingenjör</option>
+                    <option>Läkare</option>
+                    <option>Programmerare</option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <div class="ml-4">
+                  <div class="">
+                      <input type="checkbox" class="mt-1 block" >
+                  </div>
+              </div>
+              </td>
+              <td>
+               
+                  <div class="">
+                    <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                  </div>
+              </td>
+          </tr>
+          <tr class="hover:bg-gray-100 border-b border-gray-300">
+            <th >5</th>
+            <td>Mark5</td>
+            <td>
+              <div class="mb-2">
+                <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                  <option>Ingenjör</option>
+                  <option>Läkare</option>
+                  <option>Programmerare</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <div class="ml-4">
+                <div class="">
+                    <input type="checkbox" class="mt-1 block" >
+                </div>
+            </div>
+            </td>
+            <td>
+             
+                <div class="">
+                  <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                </div>
+            </td>
+        </tr>
+        </tbody>
           </table>
           </div>
         </div>
@@ -97,38 +217,154 @@
         <div class="rounded-lg shadow-lg w-full" >
           <div class="bg-blue-500 py-3 rounded-t-lg">
               <h2 class="text-3xl text-white font-bold text-center">
-                Hej Molly. du är bäst!  
+               Tabell 
               </h2>
             </div>
   
             <div class="overflow-x-auto p-3">
-                <table class="min-w-full mx-auto  table-auto table-sm text-sm">
-                  <thead>
-                  <tr class="border-b border-gray-300">
-                      <th ></th>
-                      <th >Förnamn</th>
-                      <th>Efternamn</th>
-                      <th >ålder</th>
-                      <th >stad</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr class="hover:bg-gray-100 border-b border-gray-300">
-                      <th>1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>1992</td>
-                      <td>Ludvika</td>
-                  </tr>
-                  <tr class="hover:bg-gray-100 border-b border-gray-300">
-                      <th >2</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>1992</td>
-                      <td>Ludvika</td>
-                  </tr>
-                  </tbody>
-              </table>
+              <table class="min-w-full mx-auto  table-auto table-sm text-sm">
+                <thead>
+                <tr class="border-b border-gray-300">
+                    <th ></th>
+                    <th >Namn</th>
+                    <th>Roll</th>
+                    <th >Kund?</th>
+                    <th >Kommentar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="hover:bg-gray-100 border-b border-gray-300">
+                    <th>1</th>
+                    <td>Mark</td>
+                    <td>
+                      <div class="mb-2">
+                        <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                          <option>Ingenjör</option>
+                          <option>Läkare</option>
+                          <option>Programmerare</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ml-4">
+                        <div class="">
+                            <input type="checkbox" class="mt-1 block" >
+                        </div>
+                    </div>
+                    </td>
+                    <td>
+                     
+                        <div class="">
+                          <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-100 border-b border-gray-300">
+                    <th >2</th>
+                    <td>Mark2</td>
+                    <td>
+                      <div class="mb-2">
+                        <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                          <option>Ingenjör</option>
+                          <option>Läkare</option>
+                          <option>Programmerare</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ml-4">
+                        <div class="">
+                            <input type="checkbox" class="mt-1 block" >
+                        </div>
+                    </div>
+                    </td>
+                    <td>
+                     
+                        <div class="">
+                          <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-100 border-b border-gray-300">
+                  <th >3</th>
+                  <td>Mark3</td>
+                  <td>
+                    <div class="mb-2">
+                      <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                        <option>Ingenjör</option>
+                        <option>Läkare</option>
+                        <option>Programmerare</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ml-4">
+                      <div class="">
+                          <input type="checkbox" class="mt-1 block" >
+                      </div>
+                  </div>
+                  </td>
+                  <td>
+                   
+                      <div class="">
+                        <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                      </div>
+                  </td>
+              </tr>
+              <tr class="hover:bg-gray-100 border-b border-gray-300">
+                <th >4</th>
+                <td>Mark4</td>
+                <td>
+                  <div class="mb-2">
+                    <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                      <option>Ingenjör</option>
+                      <option>Läkare</option>
+                      <option>Programmerare</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="ml-4">
+                    <div class="">
+                        <input type="checkbox" class="mt-1 block" >
+                    </div>
+                </div>
+                </td>
+                <td>
+                 
+                    <div class="">
+                      <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                    </div>
+                </td>
+            </tr>
+            <tr class="hover:bg-gray-100 border-b border-gray-300">
+              <th >5</th>
+              <td>Mark5</td>
+              <td>
+                <div class="mb-2">
+                  <select class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm sm:text-sm ">
+                    <option>Ingenjör</option>
+                    <option>Läkare</option>
+                    <option>Programmerare</option>
+                  </select>
+                </div>
+              </td>
+              <td>
+                <div class="ml-4">
+                  <div class="">
+                      <input type="checkbox" class="mt-1 block" >
+                  </div>
+              </div>
+              </td>
+              <td>
+               
+                  <div class="">
+                    <textarea class="block w-full px-3 py-2 border border-gray-300 rounded-md resize-none" style="height: 50px">Tjena</textarea>
+                  </div>
+              </td>
+          </tr>
+          </tbody>
+            </table>
             </div>
           </div>
 
